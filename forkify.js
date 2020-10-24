@@ -4,9 +4,6 @@ const searchBtn = document.querySelector(".search__btn");
 // const resultsPages = document.querySelector(".results__pages");
 const recipe = document.querySelector(".recipe");
 
-// results pages - each item should be clickable - must append the recipe no. into the URL
-// once appended, display recipe into the "recipe" panel 
-
 let pickMe = (target) => {
     console.log(target.getAttribute("recipe_id"));
     let chosenRecipeId = target.getAttribute("recipe_id");
@@ -188,59 +185,6 @@ let pickMe = (target) => {
                     resultsList.innerHTML += liTemplate;
                 }
             })
-            // let tokensC = tokensB[1].split('#');
-            // let queryId = tokensC[1];
-            // let queryTwo = encodeURIComponent(queryId);
-            // console.log(queryTwo);
-            // let dataTwo = axios.get('https://forkify-api.herokuapp.com/api/search?q=' + queryOne + queryTwo)
-            //     .then(function (response) {
-            //         console.log(response.dataTwo.recipes);
-            //         let itemsTwo = response.dataTwo.recipes;
-            //         for (let j = 0; j < itemsTwo.length; j++) {
-            //             let liTemplateResults = `<button class="btn-inline results__btn--prev">
-            //             <svg class="search__icon">
-            //                 <use href="img/icons.svg#icon-triangle-left"></use>
-            //             </svg>
-            //             <span>Page 1</span>
-            //         </button>
-            //         <button class="btn-inline results__btn--next">
-            //             <span>Page 3</span>
-            //             <svg class="search__icon">
-            //                 <use href="img/icons.svg#icon-triangle-right"></use>
-            //             </svg>
-            //         </button>`
-            //         }
-            //     })       
-            // another axios.get for the #id from tokensB
         }
 })();
 
-
-// searchBtn.addEventListener('click', e =>{
-//     console.log(searchField.value)
-    // let searchQuery = async (searchStr) => {
-    //     let data = await axios.get('https://forkify-api.herokuapp.com/api/search?q=' + searchStr)
-    //     .then(function (response) {
-    //         console.log(response);
-    //     let searchItems = response.data.recipes;
-    //     for (let i = 0; i < items.length; i++) {
-    //         // dirty approach:
-    //         let liTemplate = '<li>' + items[i].recipe_id + ' | ' + items[i].title + ' | '+ 
-    //         '<img class="small-img" src="' + items[i].image_url + '"/>' + '<button>PICK ME</button>' + '</li>';
-
-    //         // formal approach:
-    //         // let li = document.createElement();
-
-    //         searchResult.innerHTML += liTemplate;
-    //     }
-    //     return response;
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //     })
-    //     return data; 
-    // }
-    // let res = searchQuery('pizza').then((response) => {
-    //     console.log(response);
-    // })
-// })
